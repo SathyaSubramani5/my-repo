@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevOps Project</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    background: #0f172a;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: linear-gradient(120deg, #2563eb, #7c3aed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 55px;
+}
+
+/* Button */
+.btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    background: #facc15;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Section */
+.section {
+    padding: 60px;
+    text-align: center;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #f1f5f9;
+    padding: 25px;
+    width: 250px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Contact */
+input, textarea {
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Footer */
+.footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div><b>DevOps</b></div>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+
+<!-- Hero -->
+<div class="hero" id="home">
+    <div>
+        <h1>🚀 DevOps Project</h1>
+        <p>GitHub Repository Automation</p>
+        <button class="btn" onclick="scrollToSection()">Explore</button>
+    </div>
+</div>
+
+<!-- Features -->
+<div class="section" id="features">
+    <h2>Project Features</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Git Init</h3>
+            <p>Initialize repository</p>
+        </div>
+        <div class="card">
+            <h3>Commit</h3>
+            <p>Track changes</p>
+        </div>
+        <div class="card">
+            <h3>Push</h3>
+            <p>Upload to GitHub</p>
+        </div>
+    </div>
+</div>
+
+<!-- Contact -->
+<div class="section" id="contact">
+    <h2>Contact</h2>
+    <input type="text" id="name" placeholder="Your Name"><br>
+    <textarea id="msg" placeholder="Message"></textarea><br>
+    <button class="btn" onclick="sendMessage()">Send</button>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>© 2026 DevOps Project | Sathya</p>
+</div>
+
+<script>
+function scrollToSection() {
+    document.getElementById("features").scrollIntoView();
+}
+
+function sendMessage() {
+    let name = document.getElementById("name").value;
+    if(name === "") {
+        alert("Please enter your name");
+    } else {
+        alert("Message sent successfully!");
+    }
+}
+</script>
+
+</body>
+</html>
